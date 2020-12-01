@@ -1,3 +1,7 @@
+/*
+	Ўвидк≥сть Ц дв≥ умовних одиниц≥.
+	–озр€дка батарењ Ц одна умовна одиниц€
+*/
 #pragma once
 #include "Drone.h"
 
@@ -15,4 +19,3 @@ public:
 private:
 	string gpsType;
 };
-

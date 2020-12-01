@@ -14,6 +14,7 @@ public:
 	string getType();
 	int getVelocity();
 	int getBatteryCharge();
+	int getBatteryLoss();
 	int getCurrentX();
 	int getCurrentY();
 	int getDesinationX();
@@ -24,6 +25,7 @@ public:
 	void setType(string);
 	void setVelocity(int);
 	void setBatteryCharge(int);
+	void setBatteryLoss(int);
 	void setCurrentX(int);
 	void setCurrentY(int);
 	void setDestinationX(int);
@@ -32,7 +34,7 @@ public:
 	/* Дополнительные методы */
 
 	// Виртуальный метод
-	virtual void info() = 0;
+	virtual void info(Drone*) = 0;
 
 	// Метод движения дроном 
 	void move();
@@ -43,6 +45,7 @@ private:
 	string type;
 	int velocity{};
 	int batteryCharge{};
+	int batteryLoss{};
 	int currentX{};
 	int currentY{};
 	int destinationX{};
