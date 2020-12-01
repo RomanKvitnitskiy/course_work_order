@@ -1,3 +1,7 @@
+/*
+	Заглавный файл Carrier.h
+	имеет возможность перевозки груза
+*/
 #pragma once
 #include "Drone.h"
 
@@ -16,4 +20,3 @@ public:
 private:
 	int carryingCapacity{};
 };
-

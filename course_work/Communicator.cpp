@@ -1,3 +1,9 @@
+/*
+	Имплементация Communicator.h
+
+	Скорость - две условные единицы
+	Разряд батареи - одна условная единица
+*/
 #include "Communicator.h"
 
 Communicator::Communicator() {}
@@ -16,19 +22,18 @@ void Communicator::info(Drone* obj)
 	if (obj->getBatteryCharge() > 0) 
 	{
 		if (obj->getCurrentY() == 100 && obj->getCurrentX() == obj->getDesinationX())
-			cout << "Drone ID: " << obj->getId() << ", arrived at the destination." << endl
+			cout << "----------------------------------------------" << endl
+				<< "Drone ID: " << obj->getId() << ", arrived at the destination." << endl
 				<< "Position: " << endl
 				<< "x -> " << obj->getCurrentX() << ";" << endl
-				<< "y -> " << obj->getCurrentY() << ";" << endl
-				<< "Remaining battery power: " << obj->getBatteryCharge() << ";" << endl
-				<< "==============================================" << endl;
+				<< "y -> " << obj->getCurrentY() << ";" << endl;
+				
 		else
 			cout << "Drone ID: " << obj->getId() << ", keeps moving." << endl
 				<< "Position: " << endl
 				<< "x -> " << obj->getCurrentX() << ";" << endl
 				<< "y -> " << obj->getCurrentY() << ";" << endl
-				<< "Remaining battery power: " << obj->getBatteryCharge() << ";" << endl
-				<< "==============================================" << endl;
+				<< "----------------------------------------------" << endl;
 	}
 
 	/* если заряд батареи закончился но дрон успел добраться до точки назначения */
@@ -37,19 +42,15 @@ void Communicator::info(Drone* obj)
 			<< "Position: " << endl
 			<< "x -> " << obj->getCurrentX() << ";" << endl
 			<< "y -> " << obj->getCurrentY() << ";" << endl
-			<< "Remaining battery power: " << obj->getBatteryCharge() << ";" << endl
-			<< "==============================================" << endl;
+			<< "----------------------------------------------" << endl;
 
 	/* если заряд батареи закончился до того, как дрон добрался места назначения */
 	else
 		cout << "Drone ID: " << obj->getId() << ", the battery has run out, movement is not possible." << endl
-		<< "-" << endl
 		<< "Position: " << endl
 		<< "x -> " << obj->getCurrentX() << ";" << endl
 		<< "y -> " << obj->getCurrentY() << ";" << endl 
-		<< "-" << endl
-		<< "Remaining battery power: " << obj->getBatteryCharge() << ";" << endl
-		<< "==============================================" << endl;
+		<< "----------------------------------------------" << endl;
 }
 
 Communicator::~Communicator() {}

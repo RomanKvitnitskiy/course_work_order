@@ -1,3 +1,9 @@
+/*
+	Имплементация Carrier.h
+
+	Скорость - одна условная единица
+	Разряд батареи - две условные единицы
+*/
 #include "Carrier.h"
 
 Carrier::Carrier() {}
@@ -12,7 +18,7 @@ void Carrier::setCarryingCapacity(int carryingCapacity) { this->carryingCapacity
 
 void Carrier::info(Drone* obj)
 {
-	cout << "Drone ID: " << obj->getId() << " have battery: " << obj->getBatteryCharge() << endl;
+	cout << "Drone ID: " << obj->getId() << " carries a load: " << obj->getBatteryCharge() << endl;
 }
 
 Carrier::~Carrier() {}

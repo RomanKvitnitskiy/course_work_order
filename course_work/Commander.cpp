@@ -1,3 +1,9 @@
+/*
+	Имплементация Сommander.h
+
+	Скорость - две условные единицы
+	Разряд батареи - одна условная единица
+*/
 #include "Commander.h"
 
 Commander::Commander() {}
@@ -12,8 +18,9 @@ void Commander::setCommandAndControlType(string commandAndControlType) { this->c
 
 void Commander::info(Drone* obj) {
 
-	cout << "Drone " << obj->getType() << ":(" << obj->getCurrentX() << ", " << obj->getCurrentY() << ") -> ";
-	cout << "(" << obj->getDesinationX() << ", " << obj->getDesinationY() << ")" << endl;
+	cout << "Drone type: " << obj->getType() << "; ID: " << obj->getId() 
+		<< "; Coordinates: ("<< obj->getCurrentX() << ", " << obj->getCurrentY() << ") -> "
+		<< "(" << obj->getDesinationX() << ", " << obj->getDesinationY() << ")" << endl << endl;
 }
 
 Commander::~Commander() {}

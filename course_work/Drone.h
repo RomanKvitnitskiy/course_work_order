@@ -1,3 +1,9 @@
+/*
+	Заглавный файл Drone 
+	основа иерархии
+	основное управление дроном
+
+*/
 #pragma once
 #include <iostream>
 using namespace std;

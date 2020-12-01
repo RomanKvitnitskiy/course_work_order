@@ -1,3 +1,6 @@
+/*
+	Имплементация Navigator.h
+*/
 #include "Navigator.h"
 
 Navigator::Navigator() {}
