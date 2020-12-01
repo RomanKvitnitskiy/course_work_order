@@ -34,9 +34,37 @@ void Drone::setDestinationY(int destinationY) { this->destinationY = destination
 
 void Drone::move()
 {
+	/* если зар€д батареи не равен нулю, можем двигатьс€ */
 	if (getBatteryCharge() > 0)
 	{
+		/* если конечный ’ больше начального */
+		if (getCurrentX() < getDesinationX()) speedCheck(true);
 
+		/* если конечный ’ меньше начального */
+		else if (getCurrentX() > getDesinationX()) speedCheck(false);
+		
+		setBatteryCharge(getBatteryCharge() - getBatteryLoss()); // разр€д батареи
+		setCurrentY(getCurrentY() + 1); // перемещение по Y
+	}
+}
+/*
+	дополнительный метод дл€ проверки возможности выхода за приделы ’ с определенным шагом(скоростью)
+*/
+void Drone::speedCheck(bool check)
+{
+	if (check)
+	{
+		if (getVelocity() > (getDesinationX() - getCurrentX())) 
+			setCurrentX(getCurrentX() + (getDesinationX() - getCurrentX()));
+		else 
+			setCurrentX(getCurrentX() + getVelocity());
+	}
+	else
+	{
+		if (getVelocity() > (getCurrentX() - getDesinationX())) 
+			setCurrentX(getCurrentX() - (getCurrentX() - getDesinationX()));
+		else 
+			setCurrentX(getCurrentX() - getVelocity());
 	}
 }
 

@@ -36,8 +36,9 @@ public:
 	// Виртуальный метод
 	virtual void info(Drone*) = 0;
 
-	// Метод движения дроном 
+	// Методы движения дроном 
 	void move();
+	void speedCheck(bool);
 
 	~Drone();
 private:
