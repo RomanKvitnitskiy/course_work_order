@@ -30,6 +30,9 @@
     <ClCompile Include="Carrier.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Commander.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Drone.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Carrier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Commander.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

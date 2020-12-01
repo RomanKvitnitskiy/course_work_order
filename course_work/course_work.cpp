@@ -6,6 +6,6 @@ using namespace std;
 
 int main()
 {
-	Communicator com;
-	com.info(&com);
+
+
 }

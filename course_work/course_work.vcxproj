@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Carrier.cpp" />
+    <ClCompile Include="Commander.cpp" />
     <ClCompile Include="Communicator.cpp" />
     <ClCompile Include="course_work.cpp" />
     <ClCompile Include="Drone.cpp" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Carrier.h" />
+    <ClInclude Include="Commander.h" />
     <ClInclude Include="Communicator.h" />
     <ClInclude Include="Drone.h" />
     <ClInclude Include="Navigator.h" />
