@@ -39,12 +39,12 @@ public:
 
 	~Drone();
 private:
-	int id;
+	int id{};
 	string type;
-	int velocity;
-	int batteryCharge;
-	int currentX;
-	int currentY;
-	int destinationX;
-	int destinationY;
+	int velocity{};
+	int batteryCharge{};
+	int currentX{};
+	int currentY{};
+	int destinationX{};
+	int destinationY{};
 };
